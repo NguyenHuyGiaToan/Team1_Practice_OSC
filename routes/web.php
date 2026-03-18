@@ -9,3 +9,7 @@ Route::get('/nguyenhuygiatoan', function () {
 Route::get('/nguyentrongminh', function () {
     return 'Nguyễn Trọng Minh';
 });
+
+Route::get('/doanleduylong', function () {
+    return 'Đoàn Lê Duy Long';
+});
