@@ -7,3 +7,4 @@ Route::get('/nguyenhuygiatoan', function () {
 });
 
 
+Route::get('/the-loai-phim', 'App\Http\Controllers\MovieController@danhSachTheLoai');
