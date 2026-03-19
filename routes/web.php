@@ -20,3 +20,7 @@ Route::get('/nguyenthinhu', function () {
 Route::get('/huynhthithanhngoc', function () {
     return 'Huỳnh Thị Thanh Ngọc';
 });
+
+Route::get('/nguyenthibichngan', function () {
+    return 'Nguyễn Thị Bích Ngân';
+});
