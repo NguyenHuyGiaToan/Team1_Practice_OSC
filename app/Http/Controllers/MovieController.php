@@ -9,7 +9,7 @@ class MovieController extends Controller
 {
     public function moviesByRuntime()
     {
-        $movies = DB::table('movies')
+        $movies = DB::table('movie')
                     ->where('runtime', '>', 120)
                     ->orderBy('runtime', 'desc')
                     ->limit(10)
