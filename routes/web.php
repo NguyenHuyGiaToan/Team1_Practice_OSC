@@ -24,3 +24,5 @@ Route::get('/huynhthithanhngoc', function () {
 Route::get('/nguyenthibichngan', function () {
     return 'Nguyễn Thị Bích Ngân';
 });
+
+Route::get('/the-loai-phim', 'App\Http\Controllers\MovieController@danhSachTheLoai');
