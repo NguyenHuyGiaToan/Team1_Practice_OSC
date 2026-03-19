@@ -24,3 +24,5 @@ Route::get('/huynhthithanhngoc', function () {
 Route::get('/nguyenthibichngan', function () {
     return 'Nguyễn Thị Bích Ngân';
 });
+
+Route::get('/phim-thoi-luong-tren-120', [App\Http\Controllers\MovieController::class, 'moviesByRuntime']);
