@@ -13,3 +13,6 @@ Route::get('/nguyentrongminh', function () {
 Route::get('/doanleduylong', function () {
     return 'Đoàn Lê Duy Long';
 });
+Route::get('/nguyenthinhu', function () {
+    return 'Nguyễn Thị Như';
+});
