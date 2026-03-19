@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
+   
     public function danhSachTheLoai()
     {
         $theLoai = DB::table('genres')->get();
@@ -56,6 +57,17 @@ class MovieController extends Controller
 
     // Truyền dữ liệu sang view tên là canada_movies
     return view('canada_movies', compact('movies'));
+    }
+
+    function phimaction() 
+    {
+        $phimaction_tbl = DB::table('movie')
+        ->select('movie.movie_name','release_date','overview','image_link')
+        ->join('movie_genre','movie.id','=','movie_genre.id_movie')
+        ->join('genre','movie_genre.id_genre','=','genre.id')
+        ->where('genre.genre_name','Action')
+        ->get();
+        return view('movies.phimaction',compact('phimaction_tbl'));
     }
 }
 ?>

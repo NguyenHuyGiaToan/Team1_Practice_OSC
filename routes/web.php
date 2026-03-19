@@ -30,3 +30,4 @@ Route::get("/topmovies", "App\Http\Controllers\MovieController@layTopPhim");
 Route::get('/top-movies', "App\Http\Controllers\MovieController@getTopBudgetMovies");
 Route::get('/phim-thoi-luong-tren-120', [App\Http\Controllers\MovieController::class, 'moviesByRuntime']);
 Route::get('/canada-movies', "App\Http\Controllers\MovieController@getCanadaMovies");
+Route::get('/phimaction', [App\Http\Controllers\MovieController::class, 'phimaction']);
