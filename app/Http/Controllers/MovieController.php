@@ -35,5 +35,16 @@ class MovieController extends Controller
         // Truyền dữ liệu sang view
         return view('top_budget', compact('movies'));
     }
+  
+    public function moviesByRuntime()
+    {
+        $movies = DB::table('movie')
+                    ->where('runtime', '>', 120)
+                    ->orderBy('runtime', 'desc')
+                    ->limit(10)
+                    ->get();
+
+        return view('movies_by_runtime', ['movies' => $movies]);
+    }
 }
 ?>
