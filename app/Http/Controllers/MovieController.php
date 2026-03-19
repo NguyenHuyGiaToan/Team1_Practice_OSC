@@ -65,7 +65,7 @@ class MovieController extends Controller
                             ->where('genre.genre_name','Action')
                             ->get();
                             
-        return view('movies.phimaction',compact('phimaction_tbl'));
+        return view('phimaction',compact('phimaction_tbl'));
     }
 }
 ?>

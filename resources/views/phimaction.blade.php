@@ -3,25 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7.6 Hiển thị phim Action</title>
-    <style>
-    table {
-        margin: 0 auto;
-    }
-    table,th,td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    td:nth-child(2) {
-        width: 200px;
-    }
-    td:nth-child(4) {
-        width: 300px;
-    }
-    </style>
+    <title>Hiển thị phim Action</title>
+    <link rel="stylesheet" href="{{ asset('css/tbl_layout.css') }}">
+    
 </head>
 <body>
-    <h1>7.6 Hiển thị phim Action</h1>
+    <h1 class = "title">Hiển thị phim Action</h1>
     <table>
         <tr>
             <th>STT</th>
@@ -33,10 +20,10 @@
         @foreach($phimaction_tbl as $row)
         <tr>
             <td>{{$loop->index + 1}}</td>
-            <td>{{$row->movie_name}}</td>
+            <td style="width: 300px">{{$row->movie_name}}</td>
             <td>{{$row->release_date}}</td>
-            <td>{{$row->overview}}</td>
-            <td ><img style="width: 200px" src="{{$row->image_link}}" alt=""></td>
+            <td style="width: 400px">{{$row->overview}}</td>
+            <td ><img src="{{$row->image_link}}" alt=""></td>
         </tr>
         @endforeach
     </table>

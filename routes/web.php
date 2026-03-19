@@ -26,8 +26,8 @@ Route::get('/nguyenthibichngan', function () {
 });
 
 Route::get('/the-loai-phim', 'App\Http\Controllers\MovieController@danhSachTheLoai');
-Route::get("/topmovies", "App\Http\Controllers\MovieController@layTopPhim");
-Route::get('/top-movies', "App\Http\Controllers\MovieController@getTopBudgetMovies");
+Route::get("/top-phim-theo-binh-chon", "App\Http\Controllers\MovieController@layTopPhim");
+Route::get('/top-phim-theo-doanh-thu', "App\Http\Controllers\MovieController@getTopBudgetMovies");
 Route::get('/phim-thoi-luong-tren-120', [App\Http\Controllers\MovieController::class, 'moviesByRuntime']);
-Route::get('/canada-movies', "App\Http\Controllers\MovieController@getCanadaMovies");
-Route::get('/phimaction', [App\Http\Controllers\MovieController::class, 'phimaction']);
+Route::get('/phim-canada', "App\Http\Controllers\MovieController@getCanadaMovies");
+Route::get('/phim-action', [App\Http\Controllers\MovieController::class, 'phimaction']);

@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Danh sách Phim</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
-        .movie-item { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
-        .movie-name { font-weight: bold; font-size: 1.2em; color: #007bff; }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/tbl_layout.css') }}">
 </head>
 <body>
 
-    <h1>10 Bộ phim có doanh thu cao nhất</h1>
-
-    @foreach($movies as $movie)
-        <div class="movie-item">
-            <div class="movie-name">Tên phim: {{ $movie->movie_name }}</div>
-            <div>Ngày phát hành: {{ date('d/m/Y', strtotime($movie->release_date)) }}</div>
-            <div>Doanh thu: {{ number_format($movie->budget) }} USD</div>
-        </div>
-    @endforeach
+    <h1 class="title">10 Bộ phim có doanh thu cao nhất</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Hạng</th>
+                <th>Tên phim</th>
+                <th>Ngày phát hành</th>
+                <th>Doanh thu (VND)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($movies as $index => $movie)
+            <tr>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ $movie->movie_name }}</td>
+                <td>{{ date('d/m/Y', strtotime($movie->release_date)) }}</td>
+                <td>{{ number_format($movie->budget) }}</td>
+            </tr>
+            @endforeach
+    </table>
 
 </body>
 </html>

@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Danh sách thể loại phim</title>
+    <link rel="stylesheet" href="{{ asset('css/tbl_layout.css') }}">
 </head>
 <body>
-    <h2>Danh Sách Thể Loại Phim</h2>
-
-    <ul>
-        @foreach($danh_sach_the_loai as $the_loai)
-            <li>
-                <strong>Tiếng Anh:</strong> {{ $the_loai->genre_name }} | 
-                <strong>Tiếng Việt:</strong> {{ $the_loai->genre_name_vn }}
-            </li>
-        @endforeach
-    </ul>
-
+    <h2 class="title">Danh Sách Thể Loại Phim</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tiếng Anh</th>
+                <th>Tiếng Việt</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($danh_sach_the_loai as $the_loai)
+                <tr>
+                    <td>{{ $the_loai->genre_name }}</td>
+                    <td>{{ $the_loai->genre_name_vn }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 </body>
 </html>
