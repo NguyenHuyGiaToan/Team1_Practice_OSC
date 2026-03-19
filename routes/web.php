@@ -7,3 +7,4 @@ Route::get('/nguyenhuygiatoan', function () {
 });
 
 
+Route::get('/top-movies', "App\Http\Controllers\MovieController@getTopBudgetMovies");
