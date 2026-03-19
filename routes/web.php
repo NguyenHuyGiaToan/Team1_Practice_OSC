@@ -26,3 +26,4 @@ Route::get('/nguyenthibichngan', function () {
 });
 
 Route::get('/the-loai-phim', 'App\Http\Controllers\MovieController@danhSachTheLoai');
+Route::get("/topmovies", "App\Http\Controllers\MovieController@layTopPhim");
