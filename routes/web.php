@@ -1,36 +1,20 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/nguyenhuygiatoan', function () {
-    return 'Nguyễn Huy Gia Toàn';
+Route::get('/', function () {
+    return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/nguyentrongminh', function () {
-    return 'Nguyễn Trọng Minh';
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/doanleduylong', function () {
-    return 'Đoàn Lê Duy Long';
-});
-Route::get('/nguyenthinhu', function () {
-    return 'Nguyễn Thị Như';
-});
-
-Route::get('/huynhthithanhngoc', function () {
-    return 'Huỳnh Thị Thanh Ngọc';
-});
-
-Route::get('/nguyenthibichngan', function () {
-    return 'Nguyễn Thị Bích Ngân';
-});
-
-
-Route::get('/top-movies', "App\Http\Controllers\MovieController@getTopBudgetMovies");
-Route::get("/topmovies", "App\Http\Controllers\MovieController@layTopPhim");
-Route::get('/the-loai-phim', 'App\Http\Controllers\MovieController@danhSachTheLoai');
-
-Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
-Route::get('sach/chitiet/{id}','App\Http\Controllers\ViduLayoutController@chitiet');
-Route::get('/sach/theloai/{id}','App\Http\Controllers\ViduLayoutController@theloai');
+require __DIR__.'/auth.php';
