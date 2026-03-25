@@ -17,5 +17,11 @@ class MovieController extends Controller
         // Truyền dữ liệu sang view 'movies.top_rated'
         return view('top_rated', compact('ds_phim'));
     }
+  
+    public function danhSachTheLoai()
+    {
+        $theLoai = DB::table('genres')->get();
+        return view('theloai', ['danh_sach_the_loai' => $theLoai]);
+    }
 }
 ?>
