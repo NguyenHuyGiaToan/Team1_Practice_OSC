@@ -39,4 +39,4 @@ Route::get('/phim-canada', "App\Http\Controllers\MovieController@getCanadaMovies
 Route::get('/phim-action', [App\Http\Controllers\MovieController::class, 'phimaction']);
 
 Route::get('/sach','App\Http\Controllers\BookController@sach');
-
+Route::get('/sach/theloai/{id}','App\Http\Controllers\BookController@theloai');
