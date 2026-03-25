@@ -32,3 +32,4 @@ Route::get("/topmovies", "App\Http\Controllers\MovieController@layTopPhim");
 Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
 
 
+Route::get('/top-movies', "App\Http\Controllers\MovieController@getTopBudgetMovies");
