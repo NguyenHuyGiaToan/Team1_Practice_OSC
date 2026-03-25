@@ -15,3 +15,5 @@ Route::get('/nguyentrongminh', function() {
 // dung hiển thị tại file giao diện (view) gồm tên bộ phim (movie_name), ngày phát hành 
 // (release_date), Mô tả (overview), ảnh đại diện (image_link). 
 Route::get('/phimaction', [App\Http\Controllers\MovieController::class, 'phimaction']);
+
+Route::get('/sach','App\Http\Controllers\BookController@sach');
