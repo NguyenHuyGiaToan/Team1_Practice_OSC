@@ -30,6 +30,4 @@ Route::get('/the-loai-phim', 'App\Http\Controllers\MovieController@danhSachTheLo
 Route::get("/topmovies", "App\Http\Controllers\MovieController@layTopPhim");
 
 Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
-
-
 Route::get('/top-movies', "App\Http\Controllers\MovieController@getTopBudgetMovies");
