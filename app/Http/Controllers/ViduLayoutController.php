@@ -19,6 +19,12 @@ class ViduLayoutController extends Controller
         $data = DB::select("select * from sach where the_loai = ?", [$id]);
         return view("vidusach.index", compact("data"));
     }
+  
+    function chitiet($id)
+    {
+        $data = DB::select("select * from sach where id = ?", [$id])[0]; //DB::table("sach")->where("id",$id)->first();
+        return view("vidusach.chitiet", compact("data"));
+    }
 
     
 }
