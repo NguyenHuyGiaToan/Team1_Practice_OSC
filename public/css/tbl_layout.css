@@ -1,0 +1,30 @@
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+}
+tr th{
+    background-color: #c0392b;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+table {
+    margin: 0 auto;
+}
+table,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+tbody tr:nth-child(2n) {
+    background-color: lightgrey;
+}
+td {
+    padding: 10px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
