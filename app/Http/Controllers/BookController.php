@@ -19,4 +19,9 @@ class BookController extends Controller
         $data = DB::select("select * from sach where the_loai = ?", [$id]);
         return view("vidusach.index", compact("data"));
     }
+    public function chitiet($id)
+    {
+        $data = DB::select("select * from sach where id = ?", [$id]);
+        return view("vidusach.chitietsach", compact("data"));
+    }
 }

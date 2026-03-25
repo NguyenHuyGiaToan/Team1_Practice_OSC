@@ -40,3 +40,4 @@ Route::get('/phim-action', [App\Http\Controllers\MovieController::class, 'phimac
 
 Route::get('/sach','App\Http\Controllers\BookController@sach');
 Route::get('/sach/theloai/{id}','App\Http\Controllers\BookController@theloai');
+Route::get('/sach/chitietsach/{id}',"App\Http\Controllers\BookController@chitiet");
