@@ -26,8 +26,10 @@ Route::get('/nguyenthibichngan', function () {
     return 'Nguyễn Thị Bích Ngân';
 });
 
-Route::get('/the-loai-phim', 'App\Http\Controllers\MovieController@danhSachTheLoai');
+
+Route::get('/top-movies', "App\Http\Controllers\MovieController@getTopBudgetMovies");
 Route::get("/topmovies", "App\Http\Controllers\MovieController@layTopPhim");
+Route::get('/the-loai-phim', 'App\Http\Controllers\MovieController@danhSachTheLoai');
 
 Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
-Route::get('/top-movies', "App\Http\Controllers\MovieController@getTopBudgetMovies");
+Route::get('/sach/theloai/{id}','App\Http\Controllers\ViduLayoutController@theloai');

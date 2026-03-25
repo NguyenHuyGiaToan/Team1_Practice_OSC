@@ -22,3 +22,4 @@ class ViduLayoutController extends Controller
 
     
 }
+?>
