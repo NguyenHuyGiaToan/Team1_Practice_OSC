@@ -6,6 +6,7 @@ Route::get('/nguyenhuygiatoan', function () {
     return 'Nguyễn Huy Gia Toàn';
 });
 
+
 Route::get('/nguyentrongminh', function () {
     return 'Nguyễn Trọng Minh';
 });
@@ -29,3 +30,5 @@ Route::get('/the-loai-phim', 'App\Http\Controllers\MovieController@danhSachTheLo
 Route::get("/topmovies", "App\Http\Controllers\MovieController@layTopPhim");
 
 Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
+
+
