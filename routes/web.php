@@ -3,6 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/sach','App\Http\Controllers\BookController@sach');
+Route::get('/sach/theloai/{id}','App\Http\Controllers\BookController@theloai');
+Route::get('/sach/chitiet/{id}',"App\Http\Controllers\BookController@chitiet");
+
 Route::get('/', function () {
     return view('welcome');
 });
